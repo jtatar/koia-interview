@@ -1,0 +1,15 @@
+.houseForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 500px;
+}
+
+.houseForm__group {
+    display: flex;
+    align-items: start;
+}
+
+.houseForm__textfield {
+    width: 100%;
+}
