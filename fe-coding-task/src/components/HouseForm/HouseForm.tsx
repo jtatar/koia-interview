@@ -29,7 +29,7 @@ const HouseForm = ({onSubmit, startYear, startQuarter, endYear, endQuarter, hous
     })
 
     //Maybe better solution to prevent problems with only one input clearing error after validation?
-    const validateDate = (value: unknown, fields: FormInputType): boolean | string => {
+    const validateDate = (_value: unknown, fields: FormInputType): boolean | string => {
         if (fields.startYear < fields.endYear) {
             return true
         }
