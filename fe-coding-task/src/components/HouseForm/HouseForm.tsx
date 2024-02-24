@@ -1,6 +1,6 @@
 import { useForm, Controller, SubmitHandler } from "react-hook-form";
 import { TextField, Button, Select, MenuItem, InputLabel } from "@mui/material"
-import { QuarerType, FormInputType, HouseType } from "../../commonTypes";
+import { QuarterType, FormInputType, HouseType } from "../../commonTypes";
 import './HouseForm.css'
 
 const MIN_YEAR_VALIDATION_MESSAGE = "Year has to be greater than 2009"
@@ -11,9 +11,9 @@ const INVALID_PERIOD_VALIDATION_MESSAGE = "End Date cannot be earlier than Start
 interface HouseFormProps {
     onSubmit: SubmitHandler<FormInputType>,
     startYear?: string,
-    startQuarter?: QuarerType,
+    startQuarter?: QuarterType,
     endYear?: string,
-    endQuarter?: QuarerType,
+    endQuarter?: QuarterType,
     houseType?: HouseType
 }
 
@@ -21,9 +21,9 @@ const HouseForm = ({onSubmit, startYear, startQuarter, endYear, endQuarter, hous
     const { control, handleSubmit, formState: {errors} } = useForm({
         defaultValues: {
             startYear: startYear || "2009",
-            startQuarter: startQuarter || "1" as QuarerType,
+            startQuarter: startQuarter || "1" as QuarterType,
             endYear: endYear || "2023",
-            endQuarter: endQuarter || "4" as QuarerType,
+            endQuarter: endQuarter || "4" as QuarterType,
             houseType: houseType || "00" as HouseType
         },
     })

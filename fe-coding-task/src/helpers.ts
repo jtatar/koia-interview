@@ -1,6 +1,6 @@
-import { QuarerType, HouseQueryType } from "./commonTypes";
+import { QuarterType, HouseQueryType } from "./commonTypes";
 
-export const calculateDateRange = (startYear: string, endYear: string, startQuarter: QuarerType, endQuarter: QuarerType): string[] => {
+export const calculateDateRange = (startYear: string, endYear: string, startQuarter: QuarterType, endQuarter: QuarterType): string[] => {
     const datesRange = [] as string[];
 
     //Years are equal
